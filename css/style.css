@@ -385,6 +385,7 @@ h1, h2, h3, h4, h5,
     text-transform: uppercase;
     letter-spacing: 4px;
     font-size: 44px;
+    color: #441d6e;
   }
   .logo-render {
     width: 72px;
@@ -1992,7 +1993,7 @@ span.text-primary.icon-store_mall_directory.white {
   .site-logo {
     top: 0;
     display: table;
-    } 
+    }
     .site-logo img, .site-logo a{
         display: table-cell;
     }
