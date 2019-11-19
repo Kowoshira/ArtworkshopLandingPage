@@ -385,7 +385,7 @@ h1, h2, h3, h4, h5,
     text-transform: uppercase;
     letter-spacing: 4px;
     font-size: 44px;
-    color: #441d6e;
+    color: #441d6e !important;
   }
   .logo-render {
     width: 72px;
