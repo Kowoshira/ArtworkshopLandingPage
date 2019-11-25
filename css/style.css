@@ -61,6 +61,10 @@ h5,
     border-width: 2px;
 }
 
+.row.mb-4 {
+    margin-top: -140px;
+}
+
 /*
 .underline:after {
     content: '';
@@ -217,7 +221,6 @@ h5,
 .btn.btn-primary:hover {
     background: transparent;
     border-color: #6D63FF;
-    color: #000;
 }
 
 .line-height-1 {
@@ -505,7 +508,6 @@ h5,
     z-index: 1999;
     position: absolute;
     width: 100%;
-    background: #fff;
 }
 
 .site-navbar .site-logo {
@@ -519,7 +521,7 @@ h5,
     text-transform: uppercase;
     letter-spacing: 4px;
     font-size: 44px;
-    color: #441d6e !important;
+    color: #fff !important;
 }
 
 .logo-render {
@@ -580,7 +582,7 @@ h5,
 
 .site-navbar .site-navigation .site-menu > li > a {
     padding: 5px 20px;
-    color: #000;
+    color: #fff;
     display: inline-block;
     text-decoration: none !important;
 }
