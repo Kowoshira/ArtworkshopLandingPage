@@ -3,6 +3,11 @@
     src: url("../fonts/gotham/gotham-ultra.otf");
 }
 
+@font-face {
+    font-family: "Gotham book";
+    src: url("../fonts/gotham/gotham-book.otf")
+}
+
 /* Base */
 body {
   line-height: 1.7;
