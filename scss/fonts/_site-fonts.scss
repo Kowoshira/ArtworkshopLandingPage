@@ -1,0 +1,15 @@
+@font-face {
+    font-family: "Gotham";
+    src: url("../fonts/gotham/gotham-ultra.otf");
+}
+
+@font-face {
+    font-family: "Gotham book";
+    src: url("../fonts/gotham/gotham-book.otf")
+}
+
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show > .btn-primary.dropdown-toggle {
+    background-color: inherit !important;
+    color: #2e2e2E;
+    border-color: inherit !important;
+}

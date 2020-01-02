@@ -25,13 +25,18 @@
     <link rel="stylesheet" href="css/aos.css">
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom.css">
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.4/gsap.min.js"></script>
 
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 
     <div class="site-wrap" id="home-section">
-
         <div class="site-mobile-menu site-navbar-target">
             <div class="site-mobile-menu-header">
                 <div class="site-mobile-menu-close mt-3">
@@ -40,57 +45,40 @@
             </div>
             <div class="site-mobile-menu-body"></div>
         </div>
+        
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+          <img class="logo-render" src="/images/ARTWORKSHOP-Logo-image.png">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-        <div class="container d-none d-lg-block">
-            <div class="row">
-                <div class="col-12 text-center mb-4 mt-5">
-                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0"><img class="logo-render" src="/images/ARTWORKSHOP-Logo-image.png">Artworkshop</a></h1>
-                </div>
-            </div>
-        </div>
-        <header class="site-navbar py-md-4 js-sticky-header site-navbar-target" role="banner">
-
-            <div class="container">
-                <div class="row align-items-center">
-
-                    <div class="col-6 col-md-6 col-xl-2  d-block d-lg-none">
-                        <h1 class="mb-0 site-logo mobile"><img class="logo-render-mobile" src="/images/ARTWORKSHOP-Logo-image.png"><a href="index.html" class="text-black h2 mb-0">Art Work Shop</a></h1>
-                    </div>
-
-                    <div class="col-12 col-md-10 main-menu">
-                        <nav class="site-navigation position-relative text-right" role="navigation">
-                            <img class="logo-render" src="/images/ARTWORKSHOP-Logo-image.png">
-                            <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-                                <li><a href="#home-section" class="nav-link">Accueil</a></li>
-                                <li><a href="#merch-section" class="nav-link">Merchs</a></li>
-                                <li><a href="#commi-section" class="nav-link">Commission</a></li>
-                                <li><a href="#features-section" class="nav-link">Services</a></li>
-                                <li><a href="#about-section" class="nav-link">A propos</a></li>
-                                <li><a href="#contact-section" class="nav-link">Contact</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-
-                    <div class="col-6 col-md-6 d-inline-block d-lg-none ml-md-0"><a href="#" class="site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a></div>
-
-                </div>
-            </div>
-
-        </header>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li><a href="#home-section" class="nav-link">Accueil</a></li>
+              <li><a href="#merch-section" class="nav-link">Créez & Exposez</a></li>
+              <li><a href="#commi-section" class="nav-link">Vendez</a></li>
+              <li><a href="#features-section" class="nav-link">Avantages</a></li>
+              <li><a href="#about-section" class="nav-link">A propos</a></li>
+              <li><a href="#contact-section" class="nav-link">Contact</a></li>
+            </ul>
+            <button type="button" class="btn btn-dark">Contactez-nous !</button>
+            <a href="https://twitter.com/artworkshop_" class="p-3" target="_blank"><span class="icon-twitter"></span></a>
+          </div>
+        </nav>
 
 
         <div class="site-blocks-cover">
-            <div class="container">
+          <img src="images/undraw_creativity_wqmm_mixed.png" alt="Image" class="img-fluid header_illustration">
+           <div class="header_panel_right"></div>
+            <div class="container container_home">
                 <div class="row align-items-center justify-content-center">
-
                     <div class="col-md-12" style="position: relative;" data-aos="fade-up">
-
-                        <img src="images/undraw_artist_b4rc.svg" alt="Image" class="img-fluid img-absolute">
-
                         <div class="row mb-4">
                             <div class="col-lg-4 mr-auto">
-                                <h1><span id="first" class="fadeInAnimated">Créez,</span><br><span id="second" class="fadeInAnimated">Vendez,</span><br><span id="third" class="fadeInAnimated">Administrez.</span></h1>
-                                <div style="margin-top: 50px;">
+                                <h1><span id="first" class="fadeInAnimated">Créez,</span><br><span id="second" class="fadeInAnimated">Vendez,</span><br><span id="third" class="fadeInAnimated">Exposez<span class="orange_element">.</span></span></h1>
+                                <p>Créez et développez votre espace à votre façon. Un compte suffit pour commencer à exposer et/ou vendre tes créations.
+                                Aucune installation requise. A vos outils, prêts ? Créez !</p>
+                                <div>
                                     <a href="#features-section" class="btn btn-primary mr-2 mb-2">En savoir plus</a>
                                 </div>
                             </div>
@@ -102,44 +90,52 @@
 
         <div class="feature-big" id="merch-section">
             <div class="container">
-                <div class="row mb-5 site-section border-bottom">
-                    <div class="col-lg-7">
-                        <img src="images/undraw_add_to_cart.svg" alt="Image" class="img-fluid">
+                <div class="row mb-5 site-section border-bottom create_container">
+                    <div class="col-lg-5">
+                        <img src="images/undraw_Designer_girl_s028.svg" alt="Image" class="img-fluid vertical-fluid">
                     </div>
-                    <div class="col-lg-5 pl-lg-5 ml-auto mt-md-5">
-                        <h2 class="text-black">Merchs'</h2>
-                        <p class="mb-4">Créateurs : </p>
+                    <div class="col-lg-7 pl-lg-5 ml-auto mt-md-5">
+                        <h2 class="text-black">Crééz & Exposez</h2>
+                        <p class="mb-4">Tous nos services sont 100% gratuits*</p>
                         <ul class="ul-check mb-5 list-unstyled success">
-                            <li>Vendez vos produits physiques & numériques.</li>
-                            <li>Fixez vos prix et vos stocks.</li>
-                            <li>Gérez les envois de commandes. </li>
+                            <li>Book/Galerie d'exposition individuelle.</li>
+                            <li>Espace personnalisable à votre image (couleurs & dispositions).</li>
+                            <li>Galerie d'exposition mutualisée pour les collaborations.</li>
+                            <li>Mise à disposition d'un site annexe d'aide au développement d'activité.</li>
                         </ul>
-                        <p class="mb-4">Visiteurs : </p>
+                        <p class="mb-4">Les plus :</p>
                         <ul class="ul-check mb-5 list-unstyled success">
-                            <li>Découvrez des créations uniques.</li>
-                            <li>Supportez vos artistes favoris.</li>
-                            <li>Aidez au développement de créateurs talentueux.</li>
+                            <li class="plus_icomoon">Proposez vos services et talents créatifs comme bon vous semble.</li>
+                            <li class="plus_icomoon">Aucune limite créative dans le cadre légal (ajout de catégories NSFW). </li>
                         </ul>
                     </div>
                 </div>
-
+            </div>
+        </div>
+           <div id="sales-section">
+               <div class="container">
                 <div class="mt-5 row mb-5 site-section " id="commi-section">
-                    <div class="col-lg-7 order-1 order-lg-2">
-                        <img src="images/undraw_creativity_wqmm.svg" alt="Image" class="img-fluid">
+                    <div class="col-lg-5 order-1 order-lg-2">
+                        <img src="images/undraw_steps_ngvm.svg" alt="Image" class="img-fluid vertical-fluid commissions-fluid">
                     </div>
-                    <div class="col-lg-5 pr-lg-5 mr-auto mt-5 order-2 order-lg-1">
-                        <h2 class="text-black">Commissions</h2>
-                        <p class="mb-4">Créateurs:</p>
+                    <div class="col-lg-7 pr-lg-5 mr-auto mt-5 order-2 order-lg-1">
+                        <h2 class="text-black">Vendez</h2>
+                        <p class="mb-4">Commissions : </p>
                         <ul class="ul-check mb-5 list-unstyled success">
-                            <li>Proposez vos services et talents créatifs comme bon vous semble.</li>
-                            <li>Chat intégré afin de répondre aux attentes de votre client et vous faire gagner un temps précieux.</li>
-                            <li>Service entièrement sécurisé avec paiement mise en attente.</li>
+                            <li>Gérez vous-même vos disponibilités.</li>
+                            <li>Statuez en temps réel l'avancement de vos projets et créations.</li>
+                            <li>Définissez vous même vos catégories d'apparition.</li>
                         </ul>
-                        <p class="mb-4">Visiteurs :</p>
+                        <p class="mb-4">Produits en gros :</p>
                         <ul class="ul-check mb-5 list-unstyled success">
-                            <li>Recherchez un artiste pour répondre à vos besoins.</li>
-                            <li>Chat intégré vous permettant de statuer l'état de votre commande et ajouter des précisions.</li>
-                            <li>Une bibliothèque d'artiste fleurissante.</li>
+                            <li>Outil de gestion de provisions/stocks simple et intuitif.</li>
+                            <li>Définissez vous même vos catégories et cibles.</li>
+                        </ul>
+                        <p class="mb-4">Les plus :</p>
+                        <ul class="ul-check mb-5 list-unstyled success">
+                            <li class="plus_icomoon">Mise à disposition de template de contrat pour officialiser vos transactions.</li>
+                            <li class="plus_icomoon">Service entièrement sécurisé avec gestion étape par étape du processus de création et de paiement.</li>
+                            <li class="plus_icomoon">Chat intégré afin de répondre aux attentes de votre "client" et vous faire gagner un temps précieux.</li>
                         </ul>
                     </div>
                 </div>
@@ -150,7 +146,7 @@
             <div class="container">
                 <div class="row mb-5">
                     <div class="col-12 text-center">
-                        <h2 class="section-title mb-3">Les avantages.</h2>
+                        <h2 class="section-title mb-3">En résumé, les avantages.</h2>
                     </div>
                 </div>
                 <div class="row align-items-stretch">
@@ -162,7 +158,7 @@
                             </div>
                             <div>
                                 <h3>Ressources</h3>
-                                <p>Disposez d’un centre de ressources et d'aide pour développer votre univers et votre business. </p>
+                                <p>Disposez d’un centre de ressources et d'aide pour développer votre univers et votre image. </p>
                             </div>
                         </div>
 
@@ -175,7 +171,7 @@
                             </div>
                             <div>
                                 <h3>Mise en avant</h3>
-                                <p>Développez votre audience en partageant votre travail dans une bibliothèque personnelle.</p>
+                                <p>Développez votre audience en partageant votre travail dans une bibliothèque d'exposition personnelle.</p>
                             </div>
                         </div>
                     </div>
@@ -198,7 +194,7 @@
                                 <span class="icon-wrap"><span class="text-primary icon-code"></span></span>
                             </div>
                             <div>
-                                <h3>Modularité</h3>
+                                <h3>Autonomie</h3>
                                 <p>Vendez vos produits, proposez vos services, décrochez des contrats.</p>
                             </div>
                         </div>
@@ -211,7 +207,7 @@
                             </div>
                             <div>
                                 <h3>Gratuité</h3>
-                                <p>Profitez d’une plateforme sans abonnement & totalement gratuite à l’inscription.</p>
+                                <p>Profitez d’une plateforme sans abonnement & totalement gratuite.</p>
                             </div>
                         </div>
 
@@ -225,7 +221,7 @@
                             </div>
                             <div>
                                 <h3>Simplicité</h3>
-                                <p>Inscrivez-vous, paramétrez votre compte et commencez à vendre.</p>
+                                <p>Inscrivez-vous, paramétrez votre compte et commencez à exposez et/ou vendre.</p>
                             </div>
                         </div>
                     </div>
@@ -309,11 +305,11 @@
                 </div>
                 <div class="row mb-5">
                     <div class="col-12 text-center">
-                        <h2 class="section-title mb-3 underline"><a href="https://twitter.com/wasabi_house" target="_blank">Ou via <br><span style="color:#6d63ff">Twitter</span></a></h2>
+                        <h2 class="section-title mb-3 underline"><a href="https://twitter.com/artworkshop_" target="_blank">Ou via <br><span style="color:#6d63ff">Twitter</span></a></h2>
                         <div class="twitter_officiel">
-                            <img src="../images/artworkshop_logo.png">
+                            <img src="/images/ARTWORKSHOP-Logo-image.png">
                             <h3>ArtworkShop</h3>
-                            <a href="https://twitter.com/wasabi_house" target="_blank">
+                            <a href="https://twitter.com/artworkshop_" target="_blank">
                                 <span>@wasabi_house</span>
                             </a>
                         </div>
@@ -346,7 +342,7 @@
                 <div class="row mb-5">
                     <div class="col-12">
                         <p class="mb-0">
-                            <a href="https://twitter.com/wasabi_house" class="p-3" target="_blank"><span class="icon-twitter"></span></a>
+                            <a href="https://twitter.com/artworkshop_" class="p-3" target="_blank"><span class="icon-twitter"></span></a>
                         </p>
                     </div>
                 </div>

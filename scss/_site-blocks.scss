@@ -10,6 +10,11 @@
 }
 
 .site-blocks-cover {
+    overflow: hidden;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    top: 0;
 	background-size: cover;
 	background-size: 120% 200%;
 	background-repeat: no-repeat;
@@ -52,7 +57,8 @@
 	}
 	
 	h1 {
-		font-size: 3.5rem;
+		font-size: 4.5em;
+        transition: 0.3s ease;
 		font-weight: 400;
 		color: $black;
 		font-weight: 900;
@@ -61,12 +67,17 @@
 		}
 	}
 	p {
-		color: $gray-600;
-		font-size: $font-size-base;
-		
+		color: #2e2e2e;
+        width: 150%;
+        margin: 25px 0;
+		font-size: $font-size-base;		
 		font-weight: 300;
 
 	}
+    
+    .btn.btn-primary {
+        border-radius: 10px;
+    }
 	
 	.intro-text {
 		font-size: 16px;
@@ -77,8 +88,40 @@
 			font-size: $font-size-base + 2rem;
 		}
 	}
+    
+    .header_panel_right {
+        background-color: #6D63FF;
+        display: block;
+        width: 100vw;
+        height: 146vh;
+        position: absolute;
+        right: calc(100% - 100vw - 30px);
+        margin-bottom: 100px;
+        overflow: hidden;
+        transition: width 1s ease-in-out,left 1s ease-in-out,
+                    background-color 1s ease-in-out;
+        top: 0;
+        transform: rotate(26deg);
+        right: -61%;
+        
+        .orange_element {
+            color: #f9530a;
+        }
+    }
+    
+    .header_illustration {
+        height: 45vh;
+        position: absolute;
+        top: 50vh;
+        margin-top: -20vh;
+        right: 0;
+        z-index: 999;
+    }
+}
 
 
+#features-section, #merch-section {
+    background-color: #f4f4f4;
 }
 
 .img-absolute {
@@ -88,7 +131,7 @@
 		top: 50%;
 		transform: translateY(-50%) translateX(30%);
 		img {
-			max-width: 100%;
+			max-width: 60%;
 		}
 		@include media-breakpoint-down(md) {
 			position: relative;
@@ -132,10 +175,6 @@
 		  font-style: italic;
 		}
 	}
-}
-
-.bg-light {
-	background: #ccc;
 }
 
 .team-member {
@@ -1484,4 +1523,46 @@
 		display: none!important;
 	}
 
+}
+
+#home-section {
+    .twitter_officiel {
+
+        img{
+          width: 250px;
+          height: 250px;
+          border-radius: 50px;
+        }
+    }
+    .flex_twitter {
+        display: flex;
+        flex-direction: row;
+        width: 70%;
+        margin: 0 auto;
+        text-align: center;
+        
+        h3 {
+            color: #2e2e2e;
+            margin-top: 20px;
+        }
+        p {
+            text-align: center;
+            font-size: 13px;
+        }
+        img {
+            width: 95px;
+            border-radius: 50px;
+        }
+        
+        .femto {
+            height: 95px;
+            width: 95px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-color: white;
+            border-radius: 50px;
+            background-position: center;
+            margin: 0 auto;
+        }
+    }
 }

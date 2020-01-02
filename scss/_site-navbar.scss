@@ -1,3 +1,78 @@
+.navbar {
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+    padding: 0.7rem 1rem;
+    
+    .icon-twitter {
+        color: white;
+    }
+    
+    .btn.btn-dark {
+        z-index: 999;
+        border-radius: 5px;
+        background:#000;
+        border: 0px;
+        transition: 0.3s ease;
+        
+        &:hover {
+            background-color: #f9530a;
+        }
+    }
+    
+    .logo-render {
+       width: 60px !important; 
+       margin-left: 55px;
+    }
+}
+
+.navbar_collapsed {
+    background-color: #fafafa;
+    -webkit-box-shadow: 0px 2px 5px -1px rgba(69,69,69,1);
+    -moz-box-shadow: 0px 2px 5px -1px rgba(69,69,69,1);
+    box-shadow: 0px 2px 5px -1px rgba(69,69,69,1);
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(0, 0, 0, 0.9) !important;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
+
+ .navbar.transparent.navbar-inverse .navbar-inner {
+    border-width: 0px;
+    -webkit-box-shadow: 0px 0px;
+    box-shadow: 0px 0px;
+    background-color: rgba(0,0,0,0.0);
+    background-image: -webkit-gradient(linear, 50.00% 0.00%, 50.00% 100.00%, color-stop( 0% , rgba(0,0,0,0.00)),color-stop( 100% , rgba(0,0,0,0.00)));
+    background-image: -webkit-linear-gradient(270deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
+    background-image: linear-gradient(180deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
+}
+
+.site-navbar-main {
+    .site-logo {
+		position: relative;
+		left: 0;
+		top: -5px;
+        
+        a {
+            font-family: "Gotham" !important;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size: 44px;
+            color: #441d6e !important;
+        }
+        
+        .logo-render {
+            width: 72px;
+            height: auto;
+          }
+	}
+}
+
 .site-navbar {
 
 	margin-bottom: 0px;
@@ -5,13 +80,6 @@
 	position: absolute;
 	width: 100%;
 	background: $white;
-
-	.site-logo {
-		position: relative;
-		left: 0;
-		top: -5px;
-		
-	}
 	
 	.site-navigation {
 		&.border-bottom {
@@ -163,6 +231,11 @@
 				}
 			}
 		}
+        .logo-render {
+            display: none;
+            width: 37px;
+            height: auto;
+        }
 	}
 }
 
@@ -357,15 +430,35 @@
 	// }
 	.site-navbar {
 		transition: .3s all ease;
+        
+        .mobile {
+            display: flex;
+            flex-wrap: nowrap;
+            width: auto;
+            
+            .logo-render {
+                width: 65px !important; 
+                height: 120px;
+              }
+            a {
+                font-family: "Gotham";
+                max-width: 160px;
+                word-break: break-word;
+              }
+          }
 	}
 	&.is-sticky {
 		.site-navbar {
 			box-shadow: 4px 0 20px -10px rgba(0,0,0,.2);
 		}
+        .logo-render {
+            display: block;
+            float: left;
+            transition: 800ms;
+         }
 	}
 	.shrink {
 		padding-top: 10px!important;
 		padding-bottom: 10px!important;
 	}
 }
-

@@ -3,13 +3,14 @@ body {
 	color: lighten($black, 50%);
 	font-weight: 300;
 	font-size: $font-size-base;
+    overflow-x: hidden;
 }
 ::-moz-selection { 
-	background: $black;
+	background: #f9530a;
 	color: $white;
 }
 ::selection { 
-	background: $black;
+	background: #f9530a;
 	color: $white;
 }
 a {
@@ -24,7 +25,8 @@ h1, h2, h3, h4, h5,
 	font-family: $font-family-sans-serif;
 }
 .bg-light {
-	background: lighten(#eeeeee, 3%)!important;
+	background-color: transparent;
+    transition: 0.3s;
 }
 .border-2 {
 	border-width: 2px;
@@ -89,14 +91,14 @@ h1, h2, h3, h4, h5,
 	}
 	&.btn-primary {
 		border-width: 2px;
-		background: $primary;
-		border-color: $primary;
+		background: #f9530a;
+		border-color: #f9530a;
 		color: $white;
 		box-shadow: 0 4px 20px -5px rgba($primary, .4);
 		&:hover {
-			background: transparent;
+			background: $primary;
 			border-color: $primary;
-			color: $black;
+			color: $white;
 		}
 		
 	}
@@ -130,6 +132,36 @@ h1, h2, h3, h4, h5,
 	&.site-section-sm {
 		padding: 4em 0;
 	}
+    
+    &.create_container {
+        .img-fluid {
+            max-width: 70% !important;
+            margin-left: 50% !important;
+            margin-right: 0%;
+        }
+    }
+    
+    .img-fluid {
+        
+        &.vertical-fluid { 
+            margin-left: 0%;
+            margin-right: 25%;
+            
+            &.commissions-fluid {
+                -webkit-animation: action 1s infinite  alternate;
+                animation: action 1s infinite  alternate;
+                
+                @-webkit-keyframes action {
+                0% { transform: translateY(0); }
+                100% { transform: translateY(-10px); }
+                }
+                @keyframes action {
+                    0% { transform: translateY(0); }
+                    100% { transform: translateY(-10px); }
+                }
+            }
+        }
+    }
 }
 
 .site-section-heading {
@@ -295,6 +327,17 @@ h1, h2, h3, h4, h5,
 			content: "\e5ca";
 			position: absolute;
 		}
+        &.plus_icomoon {
+            &:before {
+                left: 0;
+                font-size: 20px;
+                top: -.3rem;
+                font-family: "icomoon";
+                content: "\f055";
+                position: absolute;
+                font-weight: 100;
+            }
+        }
 	}
 	&.white {
 		li {
@@ -306,7 +349,7 @@ h1, h2, h3, h4, h5,
 	&.success {
 		li {
 			&:before {
-				color: $success;
+				color: #f9530a; 
 			}
 		}
 	}
@@ -319,7 +362,7 @@ h1, h2, h3, h4, h5,
 	}
 }
 
-.select-wrap, .wrap-icon {
+.select-wrap, .wrap-icon { 
 	position: relative;
 	.icon {
 		position: absolute;

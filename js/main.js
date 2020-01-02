@@ -1,4 +1,5 @@
- AOS.init({
+
+AOS.init({
  	duration: 800,
  	easing: 'slide',
  	once: true
@@ -247,5 +248,25 @@ jQuery(document).ready(function($) {
 
   };
   siteScroll();
-
+    
+  $(document).ready(function() {
+    $(window).scroll(function() {
+        if ($(document).scrollTop() > 50) {
+            $(".navbar").addClass("navbar_collapsed");
+            
+            if($("nav").hasClass('.navbar_collapsed')) {
+                $(".bg-light").css("background-color: #fafafa;");
+                $(".bg-light").find("span").css("color: #6D63FF;")
+            }
+        }
+        if ($(document).scrollTop() > 250) {
+            gsap.to(".header_panel_right", {translateX: 36, x: 100, duration: 2.3});
+        }
+        else {
+            gsap.to(".header_panel_right", {translateX: -36, x: 100, duration: 2.3});
+            $(".navbar").removeClass("navbar_collapsed");
+        } 
+        });
+    });
 });
+
