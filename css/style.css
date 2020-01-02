@@ -360,6 +360,10 @@ h1, h2, h3, h4, h5,
   width: 100%;
 }
 
+footer .mb-5 {
+  margin: inherit !important;
+}
+
 /* Navbar */
 .navbar {
   z-index: 1000;
