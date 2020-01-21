@@ -111,7 +111,7 @@ h1, h2, h3, h4, h5,
 
 .form-control {
   height: 43px;
-  border-radius: 30px;
+  border-radius: 10px !important;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 .form-control:active, .form-control:focus {
@@ -874,7 +874,7 @@ footer .mb-5 {
   z-index: 999;
 }
 
-#features-section, #merch-section {
+#features-section, #merch-section, #contact-section {
   background-color: #f4f4f4;
 }
 
@@ -1779,7 +1779,7 @@ footer .mb-5 {
 
 .form-search-wrap {
   background: #fff;
-  border-radius: 30px;
+  border-radius: 10px !important;
 }
 .form-search-wrap .form-control {
   border: none;
@@ -2246,6 +2246,55 @@ footer .mb-5 {
 
   .container_home {
     max-width: inherit !important;
+  }
+
+  .col-lg-4.mr-auto {
+    max-width: 80%;
+    flex: inherit;
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+  .col-lg-4.mr-auto h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 3.5em;
+  }
+  .col-lg-4.mr-auto p {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .col-lg-4.mr-auto div {
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .site-blocks-cover, .site-blocks-cover > .container > .row {
+    height: calc(50vh);
+  }
+}
+@media screen and (max-width: 992px) {
+  .site-section.create_container .img-fluid, .img-fluid.vertical-fluid.commissions-fluid {
+    display: none;
+  }
+
+  .img-fluid {
+    max-width: 20%;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 0px;
+    display: block;
+  }
+
+  #home-section .flex_twitter {
+    display: block;
+  }
+}
+@media screen and (max-width: 736px) {
+  .col-lg-4.mr-auto h1 {
+    font-size: 2.1em;
   }
 }
 

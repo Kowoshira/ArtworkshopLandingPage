@@ -7,8 +7,10 @@
                 "outputDir": "../css/style.css",
                 "includePaths": [],
                 "sourceComments": true,
-                "outputStyle": "nested" 
-            }
+                "outputStyle": "nested"
+            },
+            "spaceUnits": 4,
+            "useTabChar": false
         }
     }
 }

@@ -120,7 +120,7 @@
 }
 
 
-#features-section, #merch-section {
+#features-section, #merch-section, #contact-section {
     background-color: #f4f4f4;
 }
 
@@ -1098,7 +1098,7 @@
 
 .form-search-wrap {
 	background: $white;
-	border-radius: 30px;
+	border-radius: 10px !important;
 	.form-control {
 		border: none;
 		@include media-breakpoint-down(lg) {
