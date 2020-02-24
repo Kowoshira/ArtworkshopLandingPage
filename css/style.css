@@ -133,33 +133,15 @@ h1, h2, h3, h4, h5,
   padding: 4em 0;
 }
 .site-section.create_container .img-fluid {
-  max-width: 70% !important;
+  max-width: 50% !important;
   margin-left: 50% !important;
   margin-right: 0%;
 }
 .site-section .img-fluid.vertical-fluid {
-  margin-left: 0%;
-  margin-right: 25%;
+  height: auto !important;
 }
 .site-section .img-fluid.vertical-fluid.commissions-fluid {
-  -webkit-animation: action 1s infinite alternate;
-  animation: action 1s infinite alternate;
-}
-@-webkit-keyframes action {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-10px);
-  }
-}
-@keyframes action {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-10px);
-  }
+  height: 100% !important;
 }
 
 .site-section-heading {
@@ -872,6 +854,33 @@ footer .mb-5 {
   margin-top: -20vh;
   right: 0;
   z-index: 999;
+}
+.site-blocks-cover .scroll_arrow {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  font-family: sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+  transform: translate(-50%, -50%);
+}
+.site-blocks-cover .scroll_arrow svg {
+  width: 14px;
+  display: block;
+  margin: 10px auto;
+}
+.site-blocks-cover .scroll_arrow svg .arrow {
+  animation: scroll 0.55s ease-in alternate infinite;
+}
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px);
+  }
 }
 
 #features-section, #merch-section, #contact-section {
